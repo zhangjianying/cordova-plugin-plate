@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-plate" version="1.0.0"
+xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>车牌识别插件</name>
+    <js-module name="PlatePlugin" src="www/PlatePlugin.js">
+        <clobbers target="platePlugin" />
+    </js-module>
+
+ 		<name>小视频插件</name>
+    <description>
+        Android端的车牌识别插件
+    </description>
+    <license>MIT</license>
+
+		 <engines>
+        <engine name="cordova" version=">=6.0.0" />
+    </engines>
+
+	<platform name="android">
+		<source-file src="src/PlatePlugin.java"
+			target-dir="src/com/zsoftware"/>
+
+		<config-file target="res/xml/config.xml" parent="/*">
+		  <feature name="PlatePlugin">
+			<param name="android-package" value="com.zsoftware.PlatePlugin"/>
+		  </feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+				<uses-feature
+						android:name="android.hardware.camera"
+						android:required="true" />
+				<uses-feature android:name="android.hardware.camera.autofocus" />
+		</config-file>
+
+		<framework src="src/platebuild.gradle" custom="true" type="gradleReference"/>
+		<resource-file src="src/LicensePlateLibrary-release.aar" target="libs/LicensePlateLibrary-release.aar"/>
+		<resource-file src="src/openCVLibrary341-release.aar" target="libs/openCVLibrary341-release.aar"/>
+
+  </platform>
+</plugin>
