@@ -15,7 +15,7 @@ repositories{
 
 dependencies {
     compile(name:'LicensePlateLibrary-release', ext:'aar')
-    compile(name:'openCVLibrary341-release', ext:'aar')
+    compile(name:'openCVLibrary348-release', ext:'aar')
     compile "com.android.support:appcompat-v7:27+"
 }
 
