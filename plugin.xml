@@ -36,7 +36,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 
 		<framework src="src/platebuild.gradle" custom="true" type="gradleReference"/>
 		<resource-file src="src/LicensePlateLibrary-release.aar" target="libs/LicensePlateLibrary-release.aar"/>
-		<resource-file src="src/openCVLibrary341-release.aar" target="libs/openCVLibrary341-release.aar"/>
+		<resource-file src="src/openCVLibrary348-release.aar" target="libs/openCVLibrary341-release.aar"/>
 
   </platform>
 </plugin>
